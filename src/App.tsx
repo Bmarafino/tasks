@@ -1,6 +1,13 @@
 import React from "react";
 import "./App.css";
+
 import { Button, Col, Row } from "react-bootstrap";
+import { ChangeType } from "./components/ChangeType";
+import { RevealAnswer } from "./components/RevealAnswer";
+import { StartAttempt } from "./components/StartAttempt";
+import { TwoDice } from "./components/TwoDice";
+import { CycleHoliday } from "./components/CycleHoliday";
+import { Counter } from "./components/Counter";
 
 function App(): JSX.Element {
     return (
@@ -11,27 +18,23 @@ function App(): JSX.Element {
                     Hello World
                 </h1>
             </header>
+
             <p>
                 Edit <code>src/App.tsx</code> and save. This page will
                 automatically reload. Brandon Marafino test
             </p>
-            <Row>
-                <Col>
-                    <img src={require("./Clouds.jpg")} alt="cloud image" />
-                    <Button onClick={() => console.log("Hello World!")}>
-                        Log Hello World
-                    </Button>
-                    <div className="uglysquare"></div>
-                </Col>
-                <Col>
-                    <ul>
-                        <li>one</li>
-                        <li>two</li>
-                        <li>three</li>
-                    </ul>
-                    <div className="uglysquare"></div>
-                </Col>
-            </Row>
+            <hr></hr>
+            <Counter></Counter>
+            <hr />
+            <RevealAnswer></RevealAnswer>
+            <hr />
+            <StartAttempt></StartAttempt>
+            <hr />
+            <TwoDice></TwoDice>
+            <hr />
+            <ChangeType></ChangeType>
+            <hr />
+            <CycleHoliday></CycleHoliday>
         </div>
     );
 }
