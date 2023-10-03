@@ -10,97 +10,7 @@ PASS src/arrays.test.ts
 PASS src/objects.test.ts
 PASS src/components/StartAttempt.test.tsx
 PASS src/components/TwoDice.test.tsx
-FAIL src/bad-components/ChooseTeam.test.tsx
-  ● ChooseTeam Component tests › The initial team is empty
-
-    expect(received).toHaveLength(expected)
-
-    Expected length: 0
-    Received length: 6
-    Received array:  [<li>Alan Turing</li>, <li>Grace Hopper</li>, <li>Ada Lovelace</li>, <li>Charles Babbage</li>, <li>Barbara Liskov</li>, <li>Margaret Hamilton</li>]
-
-       9 |     test("The initial team is empty", () => {
-      10 |         const currentTeam = screen.queryAllByRole("listitem");
-    > 11 |         expect(currentTeam).toHaveLength(0);
-         |                             ^
-      12 |     });
-      13 |     test("There are 7 buttons.", () => {
-      14 |         const adders = screen.queryAllByRole("button");
-
-      at Object.<anonymous> (src/bad-components/ChooseTeam.test.tsx:11:29)
-
-  ● ChooseTeam Component tests › Clicking first team member works
-
-    expect(received).toHaveLength(expected)
-
-    Expected length: 1
-    Received length: 6
-    Received array:  [<li>Alan Turing</li>, <li>Grace Hopper</li>, <li>Ada Lovelace</li>, <li>Charles Babbage</li>, <li>Barbara Liskov</li>, <li>Margaret Hamilton</li>]
-
-      19 |         first.click();
-      20 |         const currentTeam = screen.queryAllByRole("listitem");
-    > 21 |         expect(currentTeam).toHaveLength(1);
-         |                             ^
-      22 |         expect(currentTeam[0].textContent).toEqual(first.textContent);
-      23 |     });
-      24 |     test("Clicking the third team member works", () => {
-
-      at Object.<anonymous> (src/bad-components/ChooseTeam.test.tsx:21:29)
-
-  ● ChooseTeam Component tests › Clicking the third team member works
-
-    expect(received).toHaveLength(expected)
-
-    Expected length: 1
-    Received length: 6
-    Received array:  [<li>Alan Turing</li>, <li>Grace Hopper</li>, <li>Ada Lovelace</li>, <li>Charles Babbage</li>, <li>Barbara Liskov</li>, <li>Margaret Hamilton</li>]
-
-      26 |         third.click();
-      27 |         const currentTeam = screen.queryAllByRole("listitem");
-    > 28 |         expect(currentTeam).toHaveLength(1);
-         |                             ^
-      29 |         expect(currentTeam[0].textContent).toEqual(third.textContent);
-      30 |     });
-      31 |     test("Clicking three team members works", () => {
-
-      at Object.<anonymous> (src/bad-components/ChooseTeam.test.tsx:28:29)
-
-  ● ChooseTeam Component tests › Clicking three team members works
-
-    expect(received).toHaveLength(expected)
-
-    Expected length: 3
-    Received length: 6
-    Received array:  [<li>Alan Turing</li>, <li>Grace Hopper</li>, <li>Ada Lovelace</li>, <li>Charles Babbage</li>, <li>Barbara Liskov</li>, <li>Margaret Hamilton</li>]
-
-      35 |         fifth.click();
-      36 |         const currentTeam = screen.queryAllByRole("listitem");
-    > 37 |         expect(currentTeam).toHaveLength(3);
-         |                             ^
-      38 |         expect(currentTeam[0].textContent).toEqual(third.textContent);
-      39 |         expect(currentTeam[1].textContent).toEqual(second.textContent);
-      40 |         expect(currentTeam[2].textContent).toEqual(fifth.textContent);
-
-      at Object.<anonymous> (src/bad-components/ChooseTeam.test.tsx:37:29)
-
-  ● ChooseTeam Component tests › Clearing the team works
-
-    expect(received).toHaveLength(expected)
-
-    Expected length: 3
-    Received length: 6
-    Received array:  [<li>Alan Turing</li>, <li>Grace Hopper</li>, <li>Ada Lovelace</li>, <li>Charles Babbage</li>, <li>Barbara Liskov</li>, <li>Margaret Hamilton</li>]
-
-      47 |         fifth.click();
-      48 |         let currentTeam = screen.queryAllByRole("listitem");
-    > 49 |         expect(currentTeam).toHaveLength(3);
-         |                             ^
-      50 |         expect(currentTeam[0].textContent).toEqual(third.textContent);
-      51 |         expect(currentTeam[1].textContent).toEqual(second.textContent);
-      52 |         expect(currentTeam[2].textContent).toEqual(fifth.textContent);
-
-      at Object.<anonymous> (src/bad-components/ChooseTeam.test.tsx:49:29)
-
+PASS src/bad-components/ChooseTeam.test.tsx
 PASS src/bad-components/DoubleHalf.test.tsx
 PASS src/functions.test.ts
 PASS src/components/ChangeType.test.tsx
@@ -113,15 +23,15 @@ PASS src/App.test.tsx
 --------------------|---------|----------|---------|---------|-------------------
 File                | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 --------------------|---------|----------|---------|---------|-------------------
-All files           |    96.5 |    94.44 |   99.04 |   96.35 |                   
+All files           |    97.5 |    94.44 |     100 |   97.39 |                   
  src                |   96.37 |    94.54 |     100 |   96.18 |                   
   App.tsx           |     100 |      100 |     100 |     100 |                   
   arrays.ts         |   95.23 |      100 |     100 |   94.59 | 45,60             
   functions.ts      |     100 |      100 |     100 |     100 |                   
   nested.ts         |      95 |    86.95 |     100 |   94.91 | 60,72,86          
   objects.ts        |     100 |      100 |     100 |     100 |                   
- src/bad-components |   93.33 |       50 |   94.73 |    93.1 |                   
-  ChooseTeam.tsx    |      80 |       50 |   83.33 |      80 | 19-24             
+ src/bad-components |     100 |       50 |     100 |     100 |                   
+  ChooseTeam.tsx    |     100 |       50 |     100 |     100 | 18                
   ColoredBox.tsx    |     100 |      100 |     100 |     100 |                   
   DoubleHalf.tsx    |     100 |      100 |     100 |     100 |                   
   ShoveBox.tsx      |     100 |      100 |     100 |     100 |                   
@@ -137,8 +47,8 @@ All files           |    96.5 |    94.44 |   99.04 |   96.35 |
   question.ts       |       0 |        0 |       0 |       0 |                   
 --------------------|---------|----------|---------|---------|-------------------
 
-Test Suites: 1 failed, 14 passed, 15 total
-Tests:       5 failed, 106 passed, 111 total
+Test Suites: 15 passed, 15 total
+Tests:       111 passed, 111 total
 Snapshots:   0 total
-Time:        9.46 s
+Time:        9.401 s
 Ran all test suites.
