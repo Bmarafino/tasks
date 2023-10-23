@@ -1,11 +1,7 @@
 import React, { useState } from "react";
 import { Button, Modal, Form } from "react-bootstrap";
 
-export const AddQuizModal = ({
-    show,
-    handleClose,
-    addQuiz
-}: any) => {
+export const AddQuizModal = ({ show, handleClose, addQuiz }: any) => {
     const [title, setTitle] = useState<string>("Example Quiz");
     const [body, setBody] = useState<string>("Example Description");
 

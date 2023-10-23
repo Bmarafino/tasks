@@ -24,14 +24,18 @@ export const QuizEdit = ({
     const editQuestion = (questionId: number, newQuestion: Question) => {
         setNewQuiz({
             ...newQuiz,
-            questionList: newQuiz.questionList.map( (i: Question) => i.id===questionId ? newQuestion : i)
+            questionList: newQuiz.questionList.map((i: Question) =>
+                i.id === questionId ? newQuestion : i
+            )
         });
     };
 
     const removeQuestion = (questionId: number) => {
         setNewQuiz({
             ...newQuiz,
-            questionList: newQuiz.questionList.filter((i:Question) => i.id!==questionId)
+            questionList: newQuiz.questionList.filter(
+                (i: Question) => i.id !== questionId
+            )
         });
     };
 
